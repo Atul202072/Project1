@@ -2,14 +2,11 @@
 #define ROW 3
 #define COLUMN 3
 using namespace std;
-
 void linearSearch(int arr[ROW][COLUMN], int row, int column)
 {
     int value = 0, i, j, num ;
-
     cout<<"Enter the element to search: ";
     cin>>num;
-
     for(i =0; i < row; i++)
     {
         for(j = 0; j < column; j++)
@@ -23,7 +20,6 @@ void linearSearch(int arr[ROW][COLUMN], int row, int column)
         if(value == 1)
             break;
     }
-
     if(value == 1)
     {
         cout<<"Element "<<num<<" is placed at: ("<<i + 1<<","<<j + 1<<")"<<endl;
@@ -33,14 +29,10 @@ void linearSearch(int arr[ROW][COLUMN], int row, int column)
     {
         cout<<"No element found, wrong entry!"<<endl;
     }
-
 }
-
-
 int main()
 {
     int arr[ROW][COLUMN], num, i, j;
-
     for(i =0; i < ROW; i++)
     {
         for(j = 0; j < COLUMN; j++)
@@ -49,7 +41,6 @@ int main()
             cin>>arr[i][j];
         }
     }
-
     for(i =0; i < ROW; i++)
     {
         for(j = 0; j < COLUMN; j++)
@@ -58,9 +49,6 @@ int main()
         }
         cout<<endl;
     }
-
     linearSearch(arr, ROW, COLUMN);
-    
-
     return 0;
 }
